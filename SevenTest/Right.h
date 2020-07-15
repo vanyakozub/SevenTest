@@ -1,10 +1,7 @@
-//
-// Created by Ivan on 10.07.2020.
-//
-
 #ifndef SEVENTEST_RIGHT_H
 #define SEVENTEST_RIGHT_H
 #include <iostream>
+
 
 
 
@@ -15,6 +12,7 @@ private:
     std::string description;
 public:
     Right();
+    Right(uint32_t numID, std::string name, std::string description);
     ~Right();
     uint32_t getNumID();
     std::string getName();
@@ -22,6 +20,7 @@ public:
     void setNumID(uint32_t numID);
     void setName(std::string name);
     void setDescription(std::string description);
+    friend std::ostream& operator<<(std::ostream& out,  Right  &r);
 };
 
 

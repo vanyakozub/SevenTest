@@ -1,3 +1,4 @@
+
 #include "Role.h"
 #include <vector>
 
@@ -6,16 +7,18 @@
 
 class User {
 private:
-	uint32_t userID;
-	std::vector<Role> list_of_roles ;
-
-
+    uint32_t userID;
+    std::vector<Role> list_of_roles ;
 public:
-	User(std::vector<Role> initial_list);
-	~User();
-	void add_user_role(Role &role);
-	void remove_user_role(Role &role);
-	bool check_Right(uint32_t &numID);
+    User();
+
+
+    User(std::vector<Role> initial_list);
+    ~User();
+    void add_user_role(Role &role);
+    void remove_user_role(Role &role);
+    bool check_Right(uint32_t numID);
+    friend std::ostream& operator<<(std::ostream& out,  User  &user);
 
 };
 #endif
