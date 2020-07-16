@@ -15,6 +15,11 @@ public:
     void addRight(Right & right);
     void addRole(Role & role);
     void addUser(User & user);
+    int getRightNumber(uint32_t ID);
+    int getRoleNumber(uint32_t ID);
+    int getUserNumber(uint32_t ID);
+    void removeRight(uint32_t ID);
+    void removeRole(uint32_t ID);
     std::vector<Right> getListOfRights();
     std::vector<Role> getListOfRoles();
     std::vector<User> getListOfUsers();

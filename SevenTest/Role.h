@@ -13,6 +13,7 @@ private:
     // add data structure to describe a list of rights
 public:
     Role();
+    Role(uint32_t numID, std::string name, std::string description);
     ~Role();
     uint32_t getNumID();
     std::string getName();

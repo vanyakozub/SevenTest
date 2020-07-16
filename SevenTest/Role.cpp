@@ -39,7 +39,7 @@ std::vector<Right>& Role::getListOfRights() {
 void Role::removeRight(Right &right) {
     std::vector<Right>::iterator it = listOFRights.begin();
     for(;it != listOFRights.end(); ++it) {
-        if (it != listOFRights.end()) {
+        if (it->getNumID() == right.getNumID()) {
             listOFRights.erase(it);
         }
     }
@@ -60,10 +60,16 @@ bool Role::operator==(Role &role) {
 std::ostream &operator<<(std::ostream &out, Role &r) {
     out << r.getNumID() <<"\t";
     out << r.getName() <<std::endl;
-    for(int i = 0; i < r.listOFRights.size(); i++)
+    /*for(int i = 0; i < r.listOFRights.size(); i++)
     {
         out<<r.listOFRights[i] << std::endl;
     }
-    out << std::endl;
+    out << std::endl;*/
     return out;
+}
+
+Role::Role(uint32_t numID, std::string name, std::string description) {
+    this->numID = numID;
+    this->name = name;
+    this->description = description;
 }

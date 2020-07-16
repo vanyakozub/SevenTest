@@ -56,4 +56,13 @@ std::ostream &operator<<(std::ostream &out, User &user) {
     return out;
 }
 
+User::User(uint32_t id) {
+    this->userID = id;
+
+}
+
+int User::getID() {
+    return userID;
+}
+
 

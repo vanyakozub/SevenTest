@@ -8,12 +8,13 @@
 class User {
 private:
     uint32_t userID;
-    std::vector<Role> list_of_roles ;
+
 public:
     User();
-
-
+    std::vector<Role> list_of_roles;
+    User(uint32_t id);
     User(std::vector<Role> initial_list);
+    int getID();
     ~User();
     void add_user_role(Role &role);
     void remove_user_role(Role &role);
