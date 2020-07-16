@@ -22,7 +22,7 @@
 ### Подключение API
 1. Для подключения библиотеки к проекту необходимо поместить следующие команды в файл CMakeLists.txt
 ```
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.16)
     set(PROJECT YourProjectName)
     project(${PROJECT})
     
@@ -46,7 +46,7 @@ cmake_minimum_required(VERSION 3.0)
     include_directories(${AUTHO_HEADERS})
     include_directories(${AUTHO_LIB})
     #Вводим переменную в которой хранится путь до .dll файла
-    set(LIB ${AUTHO_LIB}libImapParser.dll)
+    set(LIB ${AUTHO_LIB}SevenTest.dll)
     #привязываем библиотеку к проекту
     target_link_libraries(${PROJECT} ${LIB})
 ```
