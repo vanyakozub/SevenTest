@@ -13,10 +13,6 @@ Library::~Library() {
 
 }
 
-void Library::print() {
-    std::cout << "Working!" << std::endl;
-
-}
 
 void Library::addRight(Right & right) {
     Right r(right);
